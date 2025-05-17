@@ -4,4 +4,15 @@ In this repo I hope to show people the basics of webscraping. I wanted to make t
 
 Hope there is information that helps you in your scraping journey!
 
+## Imports
+Needed imports are specified at the top of each actual guide. I did not want to make a requirements file because I had a couple of imports that are not needed or are not used in the development of this guide.
+
+### All Imports Needed
+- `requests`
+- `selenium`
+- `beautifulsoup4`
+
+### Optional
+- `glom` (for easily parsing nested objects, I did use this so if you are following the guide verbatim you should download this)
+- `jupyter` (for running code in notebooks.)
 
