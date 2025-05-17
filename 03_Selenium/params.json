@@ -1,0 +1,32 @@
+[
+    {
+        "adultPassengersCount": 1,
+        "adultsCount": 1,
+        "departureDate": "2025-05-18",
+        "departureTimeOfDay": "ALL_DAY",
+        "destinationAirportCode": "LAX",
+        "fareType": "USD",
+        "int": "HOMEQBOMAIR",
+        "originationAirportCode": "SFO",
+        "passengerType": "ADULT",
+        "promoCode": "",
+        "returnDate": "2025-05-21",
+        "returnTimeOfDay": "ALL_DAY",
+        "tripType": "roundtrip"
+    },
+    {
+        "adultPassengersCount": 1,
+        "adultsCount": 1,
+        "departureDate": "2025-05-20",
+        "departureTimeOfDay": "ALL_DAY",
+        "destinationAirportCode": "SFO",
+        "fareType": "USD",
+        "int": "HOMEQBOMAIR",
+        "originationAirportCode": "DAL",
+        "passengerType": "ADULT",
+        "promoCode": "",
+        "returnDate": "2025-05-25",
+        "returnTimeOfDay": "ALL_DAY",
+        "tripType": "roundtrip"
+    }
+]

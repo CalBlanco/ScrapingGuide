@@ -1,0 +1,417 @@
+[
+    {
+        "params": {
+            "adultPassengersCount": 1,
+            "adultsCount": 1,
+            "departureDate": "2025-05-18",
+            "departureTimeOfDay": "ALL_DAY",
+            "destinationAirportCode": "LAX",
+            "fareType": "USD",
+            "int": "HOMEQBOMAIR",
+            "originationAirportCode": "SFO",
+            "passengerType": "ADULT",
+            "promoCode": "",
+            "returnDate": "2025-05-21",
+            "returnTimeOfDay": "ALL_DAY",
+            "tripType": "roundtrip"
+        },
+        "results": [
+            {
+                "times": [
+                    "Departs 7:00AM",
+                    "Arrives 8:25AM"
+                ],
+                "duration": "1h 25m",
+                "fares": [
+                    "319 Dollars",
+                    "269 Dollars",
+                    "209 Dollars",
+                    "189 Dollars"
+                ],
+                "stops": []
+            },
+            {
+                "times": [
+                    "Departs 12:35PM",
+                    "Arrives 2:00PM"
+                ],
+                "duration": "1h 25m",
+                "fares": [
+                    "350 Dollars",
+                    "300 Dollars",
+                    "240 Dollars",
+                    "220 Dollars"
+                ],
+                "stops": []
+            },
+            {
+                "times": [
+                    "Departs 7:25PM",
+                    "Arrives 9:00PM"
+                ],
+                "duration": "1h 35m",
+                "fares": [
+                    "330 Dollars",
+                    "280 Dollars",
+                    "220 Dollars",
+                    "200 Dollars"
+                ],
+                "stops": []
+            },
+            {
+                "times": [
+                    "Departs 5:00AM",
+                    "Arrives 10:50AM"
+                ],
+                "duration": "5h 50m",
+                "fares": [
+                    "339 Dollars",
+                    "289 Dollars",
+                    "229 Dollars",
+                    "209 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:00AM",
+                    "Arrives 2:50PM"
+                ],
+                "duration": "9h 50m",
+                "fares": [
+                    "345 Dollars",
+                    "295 Dollars",
+                    "235 Dollars",
+                    "215 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:00AM",
+                    "Arrives 1:35PM"
+                ],
+                "duration": "8h 35m",
+                "fares": [
+                    "384 Dollars",
+                    "334 Dollars",
+                    "274 Dollars",
+                    "254 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:20AM",
+                    "Arrives 12:50PM"
+                ],
+                "duration": "7h 30m",
+                "fares": [
+                    "419 Dollars",
+                    "369 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:20AM",
+                    "Arrives 3:40PM"
+                ],
+                "duration": "10h 20m",
+                "fares": [
+                    "419 Dollars",
+                    "369 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:20AM",
+                    "Arrives 9:05AM"
+                ],
+                "duration": "3h 45m",
+                "fares": [
+                    "339 Dollars",
+                    "289 Dollars",
+                    "229 Dollars",
+                    "209 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 10:00AM",
+                    "Arrives 3:40PM"
+                ],
+                "duration": "5h 40m",
+                "fares": [
+                    "413 Dollars",
+                    "363 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 10:00AM",
+                    "Arrives 6:25PM"
+                ],
+                "duration": "8h 25m",
+                "fares": [],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 10:45AM",
+                    "Arrives 7:45PM"
+                ],
+                "duration": "9h 0m",
+                "fares": [
+                    "365 Dollars",
+                    "315 Dollars",
+                    "255 Dollars",
+                    "235 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 10:45AM",
+                    "Arrives 9:55PM"
+                ],
+                "duration": "11h 10m",
+                "fares": [
+                    "384 Dollars",
+                    "334 Dollars",
+                    "274 Dollars",
+                    "254 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 4:05PM",
+                    "Arrives 12:10AM"
+                ],
+                "duration": "8h 5m",
+                "fares": [
+                    "345 Dollars",
+                    "295 Dollars",
+                    "235 Dollars",
+                    "215 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 4:05PM",
+                    "Arrives 8:50PM"
+                ],
+                "duration": "4h 45m",
+                "fares": [
+                    "359 Dollars",
+                    "309 Dollars",
+                    "249 Dollars",
+                    "229 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 4:05PM",
+                    "Arrives 10:05PM"
+                ],
+                "duration": "6h 0m",
+                "fares": [
+                    "369 Dollars",
+                    "319 Dollars",
+                    "259 Dollars",
+                    "239 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:00PM",
+                    "Arrives 9:55PM"
+                ],
+                "duration": "4h 55m",
+                "fares": [
+                    "350 Dollars",
+                    "299 Dollars",
+                    "239 Dollars",
+                    "220 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:00PM",
+                    "Arrives 11:50PM"
+                ],
+                "duration": "6h 50m",
+                "fares": [
+                    "350 Dollars",
+                    "299 Dollars",
+                    "239 Dollars",
+                    "220 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 7:15PM",
+                    "Arrives 12:10AM"
+                ],
+                "duration": "4h 55m",
+                "fares": [
+                    "339 Dollars",
+                    "289 Dollars",
+                    "229 Dollars",
+                    "209 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 6:30AM",
+                    "Arrives 2:50PM"
+                ],
+                "duration": "8h 20m",
+                "fares": [
+                    "444 Dollars",
+                    "394 Dollars",
+                    "235 Dollars",
+                    "215 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 6:30AM",
+                    "Arrives 1:35PM"
+                ],
+                "duration": "7h 5m",
+                "fares": [
+                    "444 Dollars",
+                    "394 Dollars",
+                    "274 Dollars",
+                    "254 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:00AM",
+                    "Arrives 12:50PM"
+                ],
+                "duration": "7h 50m",
+                "fares": [
+                    "394 Dollars"
+                ],
+                "stops": [
+                    "Change planes PHX,LAS"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:20AM",
+                    "Arrives 2:50PM"
+                ],
+                "duration": "9h 30m",
+                "fares": [
+                    "345 Dollars",
+                    "295 Dollars",
+                    "235 Dollars",
+                    "215 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS,PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 5:20AM",
+                    "Arrives 1:35PM"
+                ],
+                "duration": "8h 15m",
+                "fares": [
+                    "384 Dollars",
+                    "334 Dollars",
+                    "274 Dollars",
+                    "254 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS,PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 4:05PM",
+                    "Arrives 11:50PM"
+                ],
+                "duration": "7h 45m",
+                "fares": [
+                    "355 Dollars",
+                    "305 Dollars",
+                    "245 Dollars",
+                    "225 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS,PHX"
+                ]
+            },
+            {
+                "times": [
+                    "Departs 4:05PM",
+                    "Arrives 11:50PM"
+                ],
+                "duration": "7h 45m",
+                "fares": [
+                    "355 Dollars",
+                    "305 Dollars",
+                    "245 Dollars",
+                    "225 Dollars"
+                ],
+                "stops": [
+                    "Change planes LAS,PHX"
+                ]
+            }
+        ]
+    }
+]
