@@ -1,0 +1,16 @@
+[
+    {
+        "south": 36.85874638670163,
+        "west": -122.07801818847658,
+        "north": 37.0839406696568,
+        "east": -121.81915283203126,
+        "observationClarity": true
+    },
+    {
+        "south": -34.693921,
+        "west": 14.844306,
+        "north": -16.917238,
+        "east": 35.218368,
+        "observationClarity": true
+    }
+]

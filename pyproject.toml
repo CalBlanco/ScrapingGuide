@@ -1,0 +1,7 @@
+[project]
+name = "scrapingtutorial"
+version = "0.1.0"
+description = "Simple scraping tutorial with examples"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
