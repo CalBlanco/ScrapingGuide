@@ -101,7 +101,7 @@ These mean something went wrong server side and the server was unable to process
 Most websites and applications operate with under the same paradigm.
 
 **Model-View-Controller**(MVC) The user is displayed a particular view (UI) then based on their inputs this is fed into the control (Backend) which ultimately manipulates a model (Database). The model then passes this information back to the view (sometimes control can be an intermediary here) and we have now gone full circle.
-![[Pasted image 20250515110033.png]]
+![[attachments/Pasted image 20250515110033.png]]
 
 The basic flow of any webpage can be understood with this paradigm. 
 
