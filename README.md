@@ -101,27 +101,27 @@ These mean something went wrong server side and the server was unable to process
 Most websites and applications operate with under the same paradigm.
 
 **Model-View-Controller**(MVC) The user is displayed a particular view (UI) then based on their inputs this is fed into the control (Backend) which ultimately manipulates a model (Database). The model then passes this information back to the view (sometimes control can be an intermediary here) and we have now gone full circle.
-![Pasted image 20250515110033.png](attachments/Pasted image 20250515110033.png)
+![Pasted image 20250515110033.png](attachments/Pasted%20image%2020250515110033.png)
 
 The basic flow of any webpage can be understood with this paradigm. 
 
 ### Example 
-![Pasted image 20250515110303.png](attachments/Pasted image 20250515110303.png)
+![Pasted image 20250515110303.png](attachments/Pasted%20image%2020250515110303.png)
 Front end for Safeway contains an input field for searching products. (View)
 
-![Pasted image 20250515110337.png](attachments/Pasted image 20250515110337.png)
+![Pasted image 20250515110337.png](attachments/Pasted%20image%2020250515110337.png)
 The `<input>` element is inside of a `<form>` element which executes an action when the form is submitted. We can see that the action is `/shop/search-results.html`. This means when a user clicks the icon (or potentially presses enter) that we will send a request to `https://safeway.com/shop/search-results.html` which will likely result in a database call. (Control)
 
 We can further see from this request call chain the flow of this operation:
-![Pasted image 20250515110849.png](attachments/Pasted image 20250515110849.png)
+![Pasted image 20250515110849.png](attachments/Pasted%20image%2020250515110849.png)
 We go from `https://safeway.com/shop/search-results.html` through a couple of weird likely advertising based requests and finally to `  
 `https://www.safeway.com/abs/pub/xapi/pgmsearch/v1/search/products?request-id=4151747332352428182...`
 
 
-![Pasted image 20250515111050.png](attachments/Pasted image 20250515111050.png)
+![Pasted image 20250515111050.png](attachments/Pasted%20image%2020250515111050.png)
 This image shows that the model has returned the requested information and now when we go back to the view we can see it has populated our UI
 
-![Pasted image 20250515111130.png](attachments/Pasted image 20250515111130.png)
+![Pasted image 20250515111130.png](attachments/Pasted%20image%2020250515111130.png)
 
 ### Some Helpful Tips/Info
 It is typically impossible for us to directly interact with the model. This would imply that the database is public facing (which is extremely unlikely / someone is getting fired behavior).
@@ -138,16 +138,16 @@ When you are on a webpage you can right click almost any element (the caveat is 
 
 Going back to the Safeway example let's say I want to understand what action is performed when I click on one of the navigational links.
 
-![Pasted image 20250515111942.png](attachments/Pasted image 20250515111942.png)
+![Pasted image 20250515111942.png](attachments/Pasted%20image%2020250515111942.png)
 
 I can now see what happens under the hood when this element is used.
-![Pasted image 20250515112021.png](attachments/Pasted image 20250515112021.png)
+![Pasted image 20250515112021.png](attachments/Pasted%20image%2020250515112021.png)
 In this instance the 'Grocery' tab might be a bad example because it just leads us back to our current page `safeway.com` but if we look down at the `health` tab we can see it routes a user to `https://safeway.com/health.html`. 
 
 We can also see some of the identifying information about the element. The `class` field represents what group of styling elements this element belongs to. Somewhere in a `.css` file there is likely a specific style for `p_nav__link`. This kind of information can be helpful in performing group finds on the html later (if we wanted to `find_all` nav links we could likely use this css group to gather them all).
 
 We can see the css styling applied here
-![Pasted image 20250515112513.png](attachments/Pasted image 20250515112513.png)
+![Pasted image 20250515112513.png](attachments/Pasted%20image%2020250515112513.png)
 
 The **Elements** tab is very useful for seeing some general information about the structure of a site. A lot of the times especially with modern webpages however they can be extremely bloated. I will cover how to deal with parsing these effectively in a later section (Likely the `Requests` section). However this tab is still fundamental to scraping and useful when trying to get started.
 
@@ -156,13 +156,13 @@ The console tab is almost exactly what it sounds like. This is where print state
 
 My browser automatically blocks a lot of requests that deal with advertisements so my console is always full of errors. Most websites / browsers will not encounter this problem. 
 
-![Pasted image 20250515113058.png](attachments/Pasted image 20250515113058.png)
+![Pasted image 20250515113058.png](attachments/Pasted%20image%2020250515113058.png)
 
 Not the most helpful tab (typically this is helpful for web developers creating an application) but it is still good to know about.
 
 ### The Network Tab
 This has to be one of my favorite debugging tabs ever. Once you understand how the networking tab works you will be able to discover website function at a much deeper level.
-![Screenshot 2025-05-15 at 11.17.01 AM.png](attachments/Screenshot 2025-05-15 at 11.17.01 AM.png)
+![Screenshot 2025-05-15 at 11.17.01 AM.png](attachments/Screenshot%202025-05-15%20at%2011.17.01%20AM.png)
 
 There are a lot of useful things within this tab. 
 
@@ -173,7 +173,7 @@ There are a lot of useful things within this tab.
 	1. `Fetch/XHR` represents our browser making a call to an external functional resource like a database call, a lot of the times these are used for advertising information
 	2. `Doc` represents actual html documents we are requesting. This will show things that generate `.html` files for our viewing.
 5. The timeline. This shows us when calls were made relative to the starting of the recording. This can be useful in situations where you can see some items are loaded in later than the page so that you can further inspect what calls were made that populated the page.
-![Screenshot 2025-05-15 at 11.33.11 AM.png](attachments/Screenshot 2025-05-15 at 11.33.11 AM.png)
+![Screenshot 2025-05-15 at 11.33.11 AM.png](attachments/Screenshot%202025-05-15%20at%2011.33.11%20AM.png)
 
 *You will likely want to have a filter on like `fetch/xhr` or `doc` because the `all` tab will get populated very quickly with a lot of unnecessary information (at least for scraping)*
 
@@ -181,7 +181,7 @@ There are a lot of useful things within this tab.
 
 ### The Application Tab
 This is not the most important tab but I felt it deserved it's own section. This tab keeps track of any stored items in use by the application / your browser.
-![Pasted image 20250515114054.png](attachments/Pasted image 20250515114054.png)
+![Pasted image 20250515114054.png](attachments/Pasted%20image%2020250515114054.png)
 
 There are a couple of options here but we primarily will only ever really care about `Local Storage`, `Session Storage`, and `Cookies`.
 
@@ -232,7 +232,7 @@ Now for this to work properly we need to find a site that is loading all of the 
 
 For a simple example we will be scraping (headline, link) pairs from https://www.cnn.com/politics
 
-![Pasted image 20250515145320.png](attachments/Pasted image 20250515145320.png)
+![Pasted image 20250515145320.png](attachments/Pasted%20image%2020250515145320.png)
 When we go to this site we can see there is a `div` element containing a couple of other elements. The ones we care about are the `<a>` tag, and the `<span>`. We can see that the `<a>` tag contains the link to the article, and the `<span>` tag contains the headline text.
 
 ##### Make the request
@@ -321,27 +321,27 @@ Let's take a look at https://surfline.com and try and take some spot information
 If you open up the "Maps" tab you will be redirected to something like `https://www.surfline.com/surf-reports-forecasts-cams-map/@36.971492,-121.9486,12z`
 We can see that this URL contains parameters representing latitude, longitude, and a zoom level.
 
-![Pasted image 20250516071654.png](attachments/Pasted image 20250516071654.png)
+![Pasted image 20250516071654.png](attachments/Pasted%20image%2020250516071654.png)
 
 
 When we try to just get the webpage we get a **403: Forbidden** error.
-![Pasted image 20250516071846.png](attachments/Pasted image 20250516071846.png)
+![Pasted image 20250516071846.png](attachments/Pasted%20image%2020250516071846.png)
 
 Telling us that View based scraping will not get the job done here. Or at least might require some level of authorization to accomplish.
 
-![Pasted image 20250516071957.png](attachments/Pasted image 20250516071957.png)
+![Pasted image 20250516071957.png](attachments/Pasted%20image%2020250516071957.png)
 What we can do however is check out the network tab and look for any potential requests that might be carrying the data that we want. Turn recording on and hit refresh on the page to generate a list of requests that occur. Filter for `Fetch/XHR`. Optionally end the recording so that you don't get any further requests cluttering the screen.
 
-![Pasted image 20250516072032.png](attachments/Pasted image 20250516072032.png)
+![Pasted image 20250516072032.png](attachments/Pasted%20image%2020250516072032.png)
 You may have to inspect a couple of requests before you are sure which one to grab. I see an interesting one here called `mapview?south=....` 
 
-![Pasted image 20250516072325.png](attachments/Pasted image 20250516072325.png)
+![Pasted image 20250516072325.png](attachments/Pasted%20image%2020250516072325.png)
 Looking at this request in more detail we can check out the `Headers` tab. We can see that this was a GET request to the above endpoint.
 
-![Pasted image 20250516072414.png](attachments/Pasted image 20250516072414.png)
+![Pasted image 20250516072414.png](attachments/Pasted%20image%2020250516072414.png)
 Looking at the Payload tab we can see the information that was sent. Importantly because this was a GET request the payload is not sent in the body, but it is encoded into the URL we sending.
 
-![[Pasted image 20250516072529.png|400]]
+![Pasted image 20250516072529.png|400](attachments/Pasted%20image%2020250516072529.png%7C400)
 Finally in the `Response` tab we can see that this request returned a JSON containing very detailed spot information from the map view that was loaded on the browser.
 
 One thing to note here as well is that the `lat`, and `lon` variables for the spots returned in this request are within the bounds specified as \[`south`, `north`\] for `lat` and \[`west`, `east`\] for `lon`.
@@ -414,7 +414,7 @@ with open('result.json', 'w') as f: #store results to a file
 	json.dump(surf_req.json(), f, indent=4)
 ```
 
-![[Pasted image 20250516075411.png|400]]
+![Pasted image 20250516075411.png|400](attachments/Pasted%20image%2020250516075411.png%7C400)
 You should see something like this depending on the arguments you sent in the request.
 
 ##### Optional `glom` parsing
@@ -434,7 +434,7 @@ parsed = glom(spot_data, specs)
 ```
 This will make two objects within our parsed object containing a list of all of the spots and their associated information. As well as a simple list of all the spot names. The former is too big / annoying to screenshot, but here is the screenshot of the `spot_names`
 
-![[Pasted image 20250516080934.png|350]]
+![Pasted image 20250516080934.png|350](attachments/Pasted%20image%2020250516080934.png%7C350)
 
 ##### Putting it all together (Our own Surfline API)
 Let's take everything we have learned in this section to build a simple tool that can scrape this spot information for us.
@@ -523,32 +523,32 @@ In my experience it is better to exhaust the `requests` library first as the ove
 In making this tutorial I thought it would be fun to scrape ticket information from https://southwest.com. I initially was going to use it for the **View Scraping** section in requests but noticed it would not work for that. I looked at their network calls and thought it might be able to work for the **Control Scraping** but I will show you the problems with that.
 
 #### View Based
-![Pasted image 20250516085129.png](attachments/Pasted image 20250516085129.png)
+![Pasted image 20250516085129.png](attachments/Pasted%20image%2020250516085129.png)
 They have a little form on their front page that let's you input your information to look for flights.
 
-![Pasted image 20250516085242.png](attachments/Pasted image 20250516085242.png)
+![Pasted image 20250516085242.png](attachments/Pasted%20image%2020250516085242.png)
 After filling out the form we can see that a document is loaded. We can see that the input fields were placed into the URL as query parameters.
 
-![Pasted image 20250516085614.png](attachments/Pasted image 20250516085614.png)
+![Pasted image 20250516085614.png](attachments/Pasted%20image%2020250516085614.png)
 We can see that each flight row is defined by a class `air-booking-select-detail`
 
-![Pasted image 20250516085737.png](attachments/Pasted image 20250516085737.png)
+![Pasted image 20250516085737.png](attachments/Pasted%20image%2020250516085737.png)
 However when parsing the DOM tree in python even after a successful we can see that our parser is unable to find the desired elements.
 
 So our View based approach is not going to work here.
 #### Control Based
 Inspecting the Network tab after clicking the button we see a request to a endpoint labeled `shopping`
 
-![Pasted image 20250516090142.png](attachments/Pasted image 20250516090142.png)
+![Pasted image 20250516090142.png](attachments/Pasted%20image%2020250516090142.png)
 It is a POST request and seems to be related to the information we passed in the form.
 
-![[Pasted image 20250516090211.png|500]]
+![Pasted image 20250516090211.png|500](attachments/Pasted%20image%2020250516090211.png%7C500)
 We can see that the payload is essentially the same as what we input into the form element.
 
-![[Pasted image 20250516090257.png|500]]
+![Pasted image 20250516090257.png|500](attachments/Pasted%20image%2020250516090257.png%7C500)
 We can also see that the response is a nice JSON format with the ticket information.
 
-![Pasted image 20250516090451.png](attachments/Pasted image 20250516090451.png)
+![Pasted image 20250516090451.png](attachments/Pasted%20image%2020250516090451.png)
 When making the request with the exact same parameters and information we can see that we are forbidden from making a request to this endpoint. So we will need to re-evaluate our strategy.
 
 #### Selenium Based
@@ -566,7 +566,7 @@ from selenium import webdriver
 
 driver = webdriver.Chrome() #creates a chrome driver 
 ```
-![Pasted image 20250517104521.png](attachments/Pasted image 20250517104521.png)
+![Pasted image 20250517104521.png](attachments/Pasted%20image%2020250517104521.png)
 You should see a empty chrome window pop up when this code is exectued
 
 We know we want to go to southwest so let's tell the driver to go there
@@ -576,11 +576,11 @@ from selenium import webdriver
 driver = webdriver.Chrome() #creates a chrome driver 
 driver.get('https://www.southwest.com')
 ```
-![Pasted image 20250517104659.png](attachments/Pasted image 20250517104659.png)
+![Pasted image 20250517104659.png](attachments/Pasted%20image%2020250517104659.png)
 The `get` method tells selenium to go to a certain page.
 
 ##### Manipulating the form
-![Pasted image 20250517104804.png](attachments/Pasted image 20250517104804.png)
+![Pasted image 20250517104804.png](attachments/Pasted%20image%2020250517104804.png)
 So you could spend your time finding all of the form elements, manipulating them, and then submitting. However I ran into some problems on this domain with this approach. Depending on the screen size the form element ids/classes change. Sometimes it seemed like a roll of the dice if it would be one format or the other even with the same screen size. Selenium offers some ways to interact with elements with `clear()`, `click()`, and `send_keys()` (as well as some other really cool utilities for doing things like this). 
 
 However I am a lazy scraper and this felt like too much work. So I decided to take a shortcut.
@@ -604,10 +604,10 @@ with open('params.json', 'w') as f:
 	json.dump(params, f, indent=4)
 ```
 
-![[Pasted image 20250517105503.png|500]]
+![Pasted image 20250517105503.png|500](attachments/Pasted%20image%2020250517105503.png%7C500)
 We now have a parameter format we can copy and paste wherever we want to and it can serve as a reference for making new parameter options. I'm going to wrap the parameter object inside of a list so that I can iterate through different parameters later. You don't have to do this step but my code will be operating under the assumption that it is receiving a list of parameters so keep that in mind if you decide to diverge from this path.
 
-![[Pasted image 20250517110007.png|500]]
+![Pasted image 20250517110007.png|500](attachments/Pasted%20image%2020250517110007.png%7C500)
 
 
 ###### Reconstructing the URL 
@@ -663,7 +663,7 @@ driver.get(url)
 
 ```
 Running this code you should hopefully see something like this
-![Pasted image 20250517110708.png](attachments/Pasted image 20250517110708.png)
+![Pasted image 20250517110708.png](attachments/Pasted%20image%2020250517110708.png)
 It says there was an error but don't worry about that right now. We can see that the arguments we used in our mock parameters were placed into the form when we went to the URL.
 
 Now what we need to do is click the Search button and we should be good to go.
@@ -695,10 +695,10 @@ submit = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'actionable_prima
 submit.click() #click the search button
 ```
 
-![Pasted image 20250517111552.png](attachments/Pasted image 20250517111552.png)
+![Pasted image 20250517111552.png](attachments/Pasted%20image%2020250517111552.png)
 Lol this was extremely hard to capture in a screenshot but we can see it was able to click the Search button by the presence of the "..." animation.
 
-![[Pasted image 20250517111626.png|500]]
+![Pasted image 20250517111626.png|500](attachments/Pasted%20image%2020250517111626.png%7C500)
 Performing this action takes us right to the listing screen of flights (this is what we saw in the [View Based](#view-based) section)
 
 ##### Scraping the HTML in Selenium
@@ -719,7 +719,7 @@ listings = soup.find_all('li', 'air-booking-select-detail') #get our listing ele
 ```
 We are performing another implicit wait to let the listings appear on the page. We then access the `driver.page_source` property to get the html code of the current page we are on in Selenium. Finally we pass this into a `BeautifulSoup` object and we are able to gather listings for the flights!
 
-![[Pasted image 20250517112202.png|500]]
+![Pasted image 20250517112202.png|500](attachments/Pasted%20image%2020250517112202.png%7C500)
 We finally have data! Now we just need to extract the information we care about.
 
 ##### Data Extraction
@@ -873,13 +873,13 @@ if __name__ == '__main__':
 ##### Here is the script in action
 
 Parameters
-![[Pasted image 20250517113454.png|500]]
+![Pasted image 20250517113454.png|500](attachments/Pasted%20image%2020250517113454.png%7C500)
 ##### DEMO 
 ![demo.mov](attachments/demo.mov)
 
 Now mine actually errored out on the second argument but it did work earlier I swear (lol). Sometimes stuff like this will happen. After erroring out on the second it seemed like southwest rate limited my requests. Sometimes you just have to wait em out.
 
-![[Pasted image 20250517114119.png|500]]
+![Pasted image 20250517114119.png|500](attachments/Pasted%20image%2020250517114119.png%7C500)
 
 Results from first scrape were saved and we can see that it was able to grab some of the listings.
 
